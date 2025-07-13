@@ -178,7 +178,7 @@ const ThankYouPage = () => {
                       Our support team is available 24/7 to assist you with any questions.
                     </p>
                     <p style={{ color: '#999', fontSize: '0.9rem', margin: '0' }}>
-                      Email: support@vininspectorpro.com<br/>
+                      Email: car.check.store@gmail.com<br/>
                       Phone: 1-888-VIN-REPORTS
                     </p>
                   </div>
@@ -210,7 +210,7 @@ const ThankYouPage = () => {
                   Back to Home
                 </Link>
                 <Link 
-                  to="/contact" 
+                  to="/" 
                   className="btn"
                   style={{ 
                     backgroundColor: 'transparent', 

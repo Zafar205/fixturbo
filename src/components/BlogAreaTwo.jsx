@@ -1,6 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
+
 const BlogAreaTwo = () => {
   return (
     <section className="blog-area space-bottom">
@@ -8,249 +6,100 @@ const BlogAreaTwo = () => {
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="title-area text-center">
-              <span className="sub-title">Blog</span>
+              <span className="sub-title">AUTOMOTIVE INSIGHTS</span>
               <h2 className="sec-title">
-                Strategic Solutions For A Thriving Future
+                Latest News & Tips About Vehicle Inspection
               </h2>
             </div>
           </div>
         </div>
-        <div className="row global-carousel blog-slider slider-shadow">
-          <Swiper
-            loop={true}
-            navigation={{
-              nextEl: ".testimonialOne-button-next",
-              prevEl: ".testimonialOne-button-prev",
-            }}
-            spaceBetween={20}
-            slidesPerGroup={1}
-            speed={1000}
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 6000 }}
-            className="mySwiper"
-            breakpoints={{
-              0: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-              992: {
-                slidesPerView: 3,
-              },
-              1200: {
-                slidesPerView: 3,
-              },
-              1400: {
-                slidesPerView: 3,
-              },
-            }}
-          >
-            <SwiperSlide>
-              <div>
-                <div className="blog-card style2">
-                  <div className="blog-img">
-                    <img src="assets/img/blog/blog_s2_1.png" alt="Fixturbo" />
-                    <div className="blog-date">
-                      <Link to="/blog">
-                        <span>17</span>Feb
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link to="/blog">
-                        <i className="fas fa-user" />
-                        By admin
-                      </Link>
-                      <Link to="/blog">
-                        <i className="fas fa-comments" />
-                        Comments (05)
-                      </Link>
-                    </div>
-                    <h3 className="blog-title">
-                      <Link to="/blog-details">
-                        Strategic Solutions for Sustainable Success
-                      </Link>
-                    </h3>
-                    <Link className="link-btn style3" to="/blog-details">
-                      Read More <i className="fas fa-arrow-right ms-2" />
-                    </Link>
-                  </div>
+        <div className="row">
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div className="blog-card style2">
+              <div className="blog-img">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="VIN Check Guide" />
+                <div className="blog-date">
+                  <span>15</span>Dec
                 </div>
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="blog-card style2">
-                  <div className="blog-img">
-                    <img src="assets/img/blog/blog_s2_2.png" alt="Fixturbo" />
-                    <div className="blog-date">
-                      <Link to="/blog">
-                        <span>17</span>Feb
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link to="/blog">
-                        <i className="fas fa-user" />
-                        By admin
-                      </Link>
-                      <Link to="/blog">
-                        <i className="fas fa-comments" />
-                        Comments (05)
-                      </Link>
-                    </div>
-                    <h3 className="blog-title">
-                      <Link to="/blog-details">
-                        Empowering Businesses Fueling Growth
-                      </Link>
-                    </h3>
-                    <Link className="link-btn style3" to="/blog-details">
-                      Read More <i className="fas fa-arrow-right ms-2" />
-                    </Link>
-                  </div>
+              <div className="blog-content">
+                <div className="blog-meta">                  <span>
+                    <i className="fas fa-user" />
+                    By NHTSA
+                  </span>
+                  <span>
+                    <i className="fas fa-comments" />
+                    Comments (12)
+                  </span>
+                </div>                <h3 className="blog-title">
+                  <a href="https://www.nhtsa.gov/vin-decoder" target="_blank" rel="noopener noreferrer">
+                    What is a VIN and How to Read It
+                  </a>
+                </h3>
+                <a className="link-btn style3" href="https://www.nhtsa.gov/vin-decoder" target="_blank" rel="noopener noreferrer">
+                  Read More <i className="fas fa-arrow-right ms-2" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div className="blog-card style2">
+              <div className="blog-img">
+                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Car History Report" />
+                <div className="blog-date">
+                  <span>22</span>Nov
                 </div>
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="blog-card style2">
-                  <div className="blog-img">
-                    <img src="assets/img/blog/blog_s2_3.png" alt="Fixturbo" />
-                    <div className="blog-date">
-                      <Link to="/blog">
-                        <span>17</span>Feb
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link to="/blog">
-                        <i className="fas fa-user" />
-                        By admin
-                      </Link>
-                      <Link to="/blog">
-                        <i className="fas fa-comments" />
-                        Comments (05)
-                      </Link>
-                    </div>
-                    <h3 className="blog-title">
-                      <Link to="/blog-details">
-                        Strategic guidance for your business success
-                      </Link>
-                    </h3>
-                    <Link className="link-btn style3" to="/blog-details">
-                      Read More <i className="fas fa-arrow-right ms-2" />
-                    </Link>
-                  </div>
+              <div className="blog-content">
+                <div className="blog-meta">                  <span>
+                    <i className="fas fa-user" />
+                    By Kelley Blue Book
+                  </span>
+                  <span>
+                    <i className="fas fa-comments" />
+                    Comments (8)
+                  </span>
+                </div>                <h3 className="blog-title">
+                  <a href="https://www.edmunds.com/car-buying/10-steps-to-buying-a-used-car.html" target="_blank" rel="noopener noreferrer">
+                    How to Check Vehicle History Before Buying
+                  </a>
+                </h3>
+                <a className="link-btn style3" href="https://www.edmunds.com/car-buying/10-steps-to-buying-a-used-car.html" target="_blank" rel="noopener noreferrer">
+                  Read More <i className="fas fa-arrow-right ms-2" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div className="blog-card style2">
+              <div className="blog-img">
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Car Buying Tips" />
+                <div className="blog-date">
+                  <span>18</span>Oct
                 </div>
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="blog-card style2">
-                  <div className="blog-img">
-                    <img src="assets/img/blog/blog_s2_1.png" alt="Fixturbo" />
-                    <div className="blog-date">
-                      <Link to="/blog">
-                        <span>17</span>Feb
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link to="/blog">
-                        <i className="fas fa-user" />
-                        By admin
-                      </Link>
-                      <Link to="/blog">
-                        <i className="fas fa-comments" />
-                        Comments (05)
-                      </Link>
-                    </div>
-                    <h3 className="blog-title">
-                      <Link to="/blog-details">
-                        Strategic Solutions for Sustainable Success
-                      </Link>
-                    </h3>
-                    <Link className="link-btn style3" to="/blog-details">
-                      Read More <i className="fas fa-arrow-right ms-2" />
-                    </Link>
-                  </div>
+              <div className="blog-content">
+                <div className="blog-meta">
+                  <span>
+                    <i className="fas fa-user" />
+                    By Edmunds
+                  </span>
+                  <span>
+                    <i className="fas fa-comments" />
+                    Comments (15)
+                  </span>
                 </div>
+                <h3 className="blog-title">
+                  <a href="https://www.edmunds.com/car-buying/10-steps-to-buying-a-used-car.html" target="_blank" rel="noopener noreferrer">
+                    10 Essential Steps to Buying a Used Car
+                  </a>
+                </h3>
+                <a className="link-btn style3" href="https://www.edmunds.com/car-buying/10-steps-to-buying-a-used-car.html" target="_blank" rel="noopener noreferrer">
+                  Read More <i className="fas fa-arrow-right ms-2" />
+                </a>
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="blog-card style2">
-                  <div className="blog-img">
-                    <img src="assets/img/blog/blog_s2_2.png" alt="Fixturbo" />
-                    <div className="blog-date">
-                      <Link to="/blog">
-                        <span>17</span>Feb
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link to="/blog">
-                        <i className="fas fa-user" />
-                        By admin
-                      </Link>
-                      <Link to="/blog">
-                        <i className="fas fa-comments" />
-                        Comments (05)
-                      </Link>
-                    </div>
-                    <h3 className="blog-title">
-                      <Link to="/blog-details">
-                        Empowering Businesses Fueling Growth
-                      </Link>
-                    </h3>
-                    <Link className="link-btn style3" to="/blog-details">
-                      Read More <i className="fas fa-arrow-right ms-2" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="blog-card style2">
-                  <div className="blog-img">
-                    <img src="assets/img/blog/blog_s2_3.png" alt="Fixturbo" />
-                    <div className="blog-date">
-                      <Link to="/blog">
-                        <span>17</span>Feb
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="blog-content">
-                    <div className="blog-meta">
-                      <Link to="/blog">
-                        <i className="fas fa-user" />
-                        By admin
-                      </Link>
-                      <Link to="/blog">
-                        <i className="fas fa-comments" />
-                        Comments (05)
-                      </Link>
-                    </div>
-                    <h3 className="blog-title">
-                      <Link to="/blog-details">
-                        Strategic guidance for your business success
-                      </Link>
-                    </h3>
-                    <Link className="link-btn style3" to="/blog-details">
-                      Read More <i className="fas fa-arrow-right ms-2" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -68,13 +68,13 @@ const HomePageTwo = () => {
       <TeamAreaTwo />
 
       {/* Client Area Two */}
-      {/* <ClientAreaTwo /> */}
+      <ClientAreaTwo />
 
       {/* Faq Area Two */}
-      {/* <FaqAreaTwo /> */}
+      <FaqAreaTwo />
 
       {/* Blog Area Two */}
-      {/* <BlogAreaTwo /> */}
+      <BlogAreaTwo />
 
       {/* Footer Area Two */}
       <FooterAreaTwo />

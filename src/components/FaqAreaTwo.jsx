@@ -1,4 +1,4 @@
-import React from "react";
+
 import TrackVisibility from "react-on-screen";
 import CountUp from "react-countup";
 const FaqAreaTwo = () => {
@@ -7,43 +7,40 @@ const FaqAreaTwo = () => {
       <div className="container">
         <div className="row gx-60 flex-row-reverse">
           <div className="col-xl-6">
-            <div className="faq-thumb2 mb-xl-0 mb-50">
-              <div className="about-counter-grid jump">
-                <img src="assets/img/icon/faq2-counter-icon-1.svg" alt="Fixturbo"/>
+            <div className="faq-thumb2 mb-xl-0 mb-50">              <div className="about-counter-grid jump">
+                <img src="https://cdn-icons-png.flaticon.com/512/3829/3829823.png" alt="VIN Reports" style={{width: '60px', height: '60px'}}/>
                 <div className="media-right">
                   <h3 className="about-counter">
                     <TrackVisibility once>
                       {({ isVisible }) =>
                         isVisible && (
                           <span className="counter-number">
-                            <CountUp delay={0} start={0} end={250} />+
+                            <CountUp delay={0} start={0} end={50} />k+
                           </span>
                         )
                       }
                     </TrackVisibility>
                   </h3>
-                  <h4 className="about-counter-text">Services we provide</h4>
+                  <h4 className="about-counter-text">VIN Reports Generated</h4>
                 </div>
               </div>
-              <img src="assets/img/normal/faq-thumb-2-1.png" alt="Fixturbo"/>
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Vehicle Inspection"/>
             </div>
           </div>
-          <div className="col-xl-6">
-            <div className="title-area">
-              <span className="sub-title">ask anything</span>
+          <div className="col-xl-6">            <div className="title-area">
+              <span className="sub-title">FREQUENTLY ASKED QUESTIONS</span>
               <h2 className="sec-title">
-                Empowering businesses <br /> For A Brighter Future{" "}
+                Everything You Need To Know <br /> About VIN Inspection Reports{" "}
                 <img
                   className="title-bg-shape"
                   src="assets/img/bg/title-bg-shape.png"
-                  alt="Fixturbo"
+                  alt="Shape"
                 />
               </h2>
             </div>
             <div className="accordion-area accordion" id="faqAccordion">
               <div className="accordion-card style2 active">
-                <div className="accordion-header" id="collapse-item-1">
-                  <button
+                <div className="accordion-header" id="collapse-item-1">                  <button
                     className="accordion-button "
                     type="button"
                     data-bs-toggle="collapse"
@@ -52,7 +49,7 @@ const FaqAreaTwo = () => {
                     aria-controls="collapse-1"
                   >
                     {" "}
-                    What is the purpose of a business plan?
+                    What information is included in a VIN inspection report?
                   </button>
                 </div>
                 <div
@@ -63,16 +60,15 @@ const FaqAreaTwo = () => {
                 >
                   <div className="accordion-body">
                     <p className="faq-text">
-                      Some essential steps to start a business include
-                      conducting market research, creating Some essential steps
-                      to start a business.
+                      Our comprehensive VIN inspection reports include vehicle history, accident records, title information, 
+                      previous ownership details, mileage verification, recall information, and detailed specifications 
+                      to help you make informed purchasing decisions.
                     </p>
                   </div>
                 </div>
               </div>
               <div className="accordion-card style2">
-                <div className="accordion-header" id="collapse-item-2">
-                  <button
+                <div className="accordion-header" id="collapse-item-2">                  <button
                     className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
@@ -81,7 +77,7 @@ const FaqAreaTwo = () => {
                     aria-controls="collapse-2"
                   >
                     {" "}
-                    How can I register my business name?
+                    How quickly can I get my VIN inspection report?
                   </button>
                 </div>
                 <div
@@ -92,16 +88,15 @@ const FaqAreaTwo = () => {
                 >
                   <div className="accordion-body">
                     <p className="faq-text">
-                      Some essential steps to start a business include
-                      conducting market research, creating Some essential steps
-                      to start a business.
+                      Most VIN inspection reports are generated instantly upon payment. In some cases where additional 
+                      verification is needed, reports may take up to 24 hours. You'll receive your detailed report 
+                      via email with all the vehicle information you need.
                     </p>
                   </div>
                 </div>
               </div>
               <div className="accordion-card style2">
-                <div className="accordion-header" id="collapse-item-3">
-                  <button
+                <div className="accordion-header" id="collapse-item-3">                  <button
                     className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
@@ -110,7 +105,7 @@ const FaqAreaTwo = () => {
                     aria-controls="collapse-3"
                   >
                     {" "}
-                    How can I protect my intellectual property?
+                    Is my personal information secure when ordering a report?
                   </button>
                 </div>
                 <div
@@ -121,9 +116,9 @@ const FaqAreaTwo = () => {
                 >
                   <div className="accordion-body">
                     <p className="faq-text">
-                      Some essential steps to start a business include
-                      conducting market research, creating Some essential steps
-                      to start a business.
+                      Yes, we use industry-standard SSL encryption to protect all personal and payment information. 
+                      Your data is never shared with third parties, and we comply with all privacy regulations 
+                      to ensure your information remains completely secure and confidential.
                     </p>
                   </div>
                 </div>

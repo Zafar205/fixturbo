@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const HeroTwo = () => {
@@ -23,10 +22,8 @@ const HeroTwo = () => {
                   Automotive
                 </span>{" "}
                 Excellence One Repair At Time
-              </h1>
-              <p className="hero-text text-white">
-                Vestibulum rhoncus nisl ac gravida porta. Mauris eu sapien
-                lacus. Etiam molestie justo neque, in convallis massa tempus in.
+              </h1>              <p className="hero-text text-white">
+                Professional car inspection services you can trust. Our certified technicians provide comprehensive vehicle assessments to ensure your safety and peace of mind on the road.
               </p>
               <div className="btn-group">
                 <Link to="/about" className="btn">

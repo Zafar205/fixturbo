@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const PricingPlanTwo = () => {
   const [userCountry, setUserCountry] = useState('US');
@@ -80,9 +79,9 @@ const PricingPlanTwo = () => {
     } else {
       initializePaddle();
     }
-
     // Detect user country
     detectUserCountry();
+    // eslint-disable-next-line
   }, []);
 
   // Detect user's country

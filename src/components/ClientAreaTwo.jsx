@@ -1,23 +1,27 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, FreeMode, Thumbs, EffectFade } from "swiper";
-import { Link } from "react-router-dom";
+import { Navigation, FreeMode, Thumbs, EffectFade, Autoplay } from "swiper";
 const ClientAreaTwo = () => {
   return (
     <div
       className="client-bg-area-2"
-      style={{ backgroundImage: "url(assets/img/bg/client-bg2-1.png)" }}
-    >
-      <div className="client-area-2 space text-center">
+      style={{ 
+        backgroundImage: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)",
+        position: "relative"
+      }}
+    >      <div className="client-area-2 space text-center">
         <div className="container">
+          <div className="title-area mb-50">
+            <span className="sub-title text-white">TRUSTED BY LEADING AUTOMOTIVE BRANDS</span>
+            <h2 className="sec-title text-white">Our Trusted Partners</h2>
+          </div>
           <div className="row global-carousel">
             <Swiper
               loop={true}
-              spaceBetween={20}
+              spaceBetween={30}
               slidesPerGroup={1}
               speed={1000}
               pagination={{ clickable: true }}
-              autoplay={{ delay: 6000 }}
+              autoplay={{ delay: 3000 }}
               className="mySwiper"
               breakpoints={{
                 0: {
@@ -33,119 +37,115 @@ const ClientAreaTwo = () => {
                   slidesPerView: 5,
                 },
                 1400: {
-                  slidesPerView: 5,
+                  slidesPerView: 6,
                 },
               }}
             >
               <SwiperSlide>
                 <div>
-                  <div className="client-logo">
-                    <Link to="/">
-                      <img src="assets/img/client/1-1.png" alt="Fixturbo" />
-                    </Link>
+                  <div className="client-logo" style={{ filter: 'brightness(0) invert(1)', opacity: '0.8' }}>
+                    <img 
+                      src="https://logos-world.net/wp-content/uploads/2021/03/BMW-Logo.png" 
+                      alt="BMW" 
+                      style={{ height: '60px', objectFit: 'contain' }}
+                    />
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div>
-                  <div className="client-logo">
-                    <Link to="/">
-                      <img src="assets/img/client/1-2.png" alt="Fixturbo" />
-                    </Link>
+                  <div className="client-logo" style={{ filter: 'brightness(0) invert(1)', opacity: '0.8' }}>
+                    <img 
+                      src="https://logos-world.net/wp-content/uploads/2021/03/Audi-Logo.png" 
+                      alt="Audi" 
+                      style={{ height: '60px', objectFit: 'contain' }}
+                    />
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div>
-                  <div className="client-logo">
-                    <Link to="/">
-                      <img src="assets/img/client/1-3.png" alt="Fixturbo" />
-                    </Link>
+                  <div className="client-logo" style={{ filter: 'brightness(0) invert(1)', opacity: '0.8' }}>
+                    <img 
+                      src="https://logos-world.net/wp-content/uploads/2021/03/Mercedes-Benz-Logo.png" 
+                      alt="Mercedes-Benz" 
+                      style={{ height: '60px', objectFit: 'contain' }}
+                    />
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div>
-                  <div className="client-logo">
-                    <Link to="/">
-                      <img src="assets/img/client/1-4.png" alt="Fixturbo" />
-                    </Link>
+                  <div className="client-logo" style={{ filter: 'brightness(0) invert(1)', opacity: '0.8' }}>
+                    <img 
+                      src="https://logos-world.net/wp-content/uploads/2021/03/Toyota-Logo.png" 
+                      alt="Toyota" 
+                      style={{ height: '60px', objectFit: 'contain' }}
+                    />
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div>
-                  <div className="client-logo">
-                    <Link to="/">
-                      <img src="assets/img/client/1-5.png" alt="Fixturbo" />
-                    </Link>
+                  <div className="client-logo" style={{ filter: 'brightness(0) invert(1)', opacity: '0.8' }}>
+                    <img 
+                      src="https://logos-world.net/wp-content/uploads/2021/03/Honda-Logo.png" 
+                      alt="Honda" 
+                      style={{ height: '60px', objectFit: 'contain' }}
+                    />
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div>
-                  <div className="client-logo">
-                    <Link to="/">
-                      <img src="assets/img/client/1-1.png" alt="Fixturbo" />
-                    </Link>
+                  <div className="client-logo" style={{ filter: 'brightness(0) invert(1)', opacity: '0.8' }}>
+                    <img 
+                      src="https://logos-world.net/wp-content/uploads/2021/03/Nissan-Logo.png" 
+                      alt="Ford" 
+                      style={{ height: '60px', objectFit: 'contain' }}
+                    />
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div>
-                  <div className="client-logo">
-                    <Link to="/">
-                      <img src="assets/img/client/1-2.png" alt="Fixturbo" />
-                    </Link>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                {" "}
-                <div>
-                  <div className="client-logo">
-                    <Link to="/">
-                      <img src="assets/img/client/1-3.png" alt="Fixturbo" />
-                    </Link>
+                  <div className="client-logo" style={{ filter: 'brightness(0) invert(1)', opacity: '0.8' }}>
+                    <img 
+                      src="https://logos-world.net/wp-content/uploads/2020/09/Volkswagen-Logo.png" 
+                      alt="Volkswagen" 
+                      style={{ height: '60px', objectFit: 'contain' }}
+                    />
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div>
-                  <div className="client-logo">
-                    <Link to="/">
-                      <img src="assets/img/client/1-4.png" alt="Fixturbo" />
-                    </Link>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <div className="client-logo">
-                    <Link to="/">
-                      <img src="assets/img/client/1-5.png" alt="Fixturbo" />
-                    </Link>
+                  <div className="client-logo" style={{ filter: 'brightness(0) invert(1)', opacity: '0.8' }}>
+                    <img 
+                      src="https://logos-world.net/wp-content/uploads/2020/09/Nissan-Logo.png" 
+                      alt="Nissan" 
+                      style={{ height: '60px', objectFit: 'contain' }}
+                    />
                   </div>
                 </div>
               </SwiperSlide>
             </Swiper>
           </div>
         </div>
-      </div>
-      {/*==============================
+      </div>      {/*==============================
     Testimonial Area  
     ==============================*/}
-      <div className="testimonial-area-2 overflow-hidden">
+      <div className="testimonial-area-2 overflow-hidden" style={{ background: 'linear-gradient(135deg, #E8092E 0%, #b30722 100%)' }}>
         <div className="container">
           <div className="row justify-content-end">
             <div className="col-lg-7">
               <div className="testiomonial-wrap-2 bg-title">
                 <div className="title-area">
-                  <span className="sub-title">CLIENTS REVIEWS</span>
-                  <h2 className="sec-title text-white">WHAT OUR CLIENT SAYS</h2>
+                  <span className="sub-title">CUSTOMER REVIEWS</span>
+                  <h2 className="sec-title text-white">WHAT OUR CUSTOMERS SAY</h2>
                 </div>
                 <div className="quote-icon">
-                  <img src="assets/img/icon/quote2-1.svg" alt="Fixturbo" />
+                  <img src="assets/img/icon/quote2-1.svg" alt="Quote" />
                 </div>
                 <div className="row global-carousel testi-slider-2">
                   <Swiper
@@ -157,9 +157,8 @@ const ClientAreaTwo = () => {
                     spaceBetween={20}
                     slidesPerGroup={1}
                     speed={1000}
-                    pagination={{ clickable: true }}
-                    autoplay={{ delay: 6000 }}
-                    modules={[FreeMode, Navigation, Thumbs, EffectFade]}
+                    pagination={{ clickable: true }}                    autoplay={{ delay: 6000 }}
+                    modules={[FreeMode, Navigation, Thumbs, EffectFade, Autoplay]}
                     className="mySwiper"
                     breakpoints={{
                       0: {
@@ -180,116 +179,80 @@ const ClientAreaTwo = () => {
                     }}
                   >
                     <SwiperSlide>
-                      <div>
-                        <div className="testi-card style2">
+                      <div>                        <div className="testi-card style2">
                           <div className="testi-card_content">
                             <div className="testi-card-profile">
-                              <div className="testi-profile_thumb">
-                                <img
-                                  src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Fixturbo"
-                                />
-                              </div>
                               <div className="testi-card-profile-details">
                                 <h4 className="testi-profile-title">
-                                  James Anderson{" "}
+                                  Mike Johnson
                                 </h4>
                                 <span className="testi-profile-desig">
-                                  Software Engineer
+                                  Car Dealer
                                 </span>
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              Working with this company has been a game-changer
-                              for my business. Their expertise and innovative
-                              approach have helped us achieve remarkable
+                              "The VIN inspection report was incredibly detailed and helped me make an informed decision about purchasing my used car. The service was fast and professional!"
                             </p>
                           </div>
                         </div>
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div>
-                        <div className="testi-card style2">
+                      <div>                        <div className="testi-card style2">
                           <div className="testi-card_content">
                             <div className="testi-card-profile">
-                              <div className="testi-profile_thumb">
-                                <img
-                                  src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Fixturbo"
-                                />
-                              </div>
                               <div className="testi-card-profile-details">
                                 <h4 className="testi-profile-title">
-                                  James Anderson{" "}
+                                  Sarah Williams
                                 </h4>
                                 <span className="testi-profile-desig">
-                                  Software Engineer
+                                  First-time Car Buyer
                                 </span>
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              Working with this company has been a game-changer
-                              for my business. Their expertise and innovative
-                              approach have helped us achieve remarkable
+                              "As a first-time car buyer, this VIN check service gave me peace of mind. The report revealed important history that wasn't disclosed by the seller. Highly recommend!"
                             </p>
                           </div>
                         </div>
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div>
-                        <div className="testi-card style2">
+                      <div>                        <div className="testi-card style2">
                           <div className="testi-card_content">
                             <div className="testi-card-profile">
-                              <div className="testi-profile_thumb">
-                                <img
-                                  src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Fixturbo"
-                                />
-                              </div>
                               <div className="testi-card-profile-details">
                                 <h4 className="testi-profile-title">
-                                  James Anderson{" "}
+                                  David Rodriguez
                                 </h4>
                                 <span className="testi-profile-desig">
-                                  Software Engineer
+                                  Automotive Mechanic
                                 </span>
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              Working with this company has been a game-changer
-                              for my business. Their expertise and innovative
-                              approach have helped us achieve remarkable
+                              "I use this service for all my customers who are buying used vehicles. The comprehensive reports help identify potential issues before purchase. Excellent accuracy!"
                             </p>
                           </div>
                         </div>
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div>
-                        <div className="testi-card style2">
+                      <div>                        <div className="testi-card style2">
                           <div className="testi-card_content">
                             <div className="testi-card-profile">
-                              <div className="testi-profile_thumb">
-                                <img
-                                  src="assets/img/testimonial/testimonial-2-1.png"
-                                  alt="Fixturbo"
-                                />
-                              </div>
                               <div className="testi-card-profile-details">
                                 <h4 className="testi-profile-title">
-                                  James Anderson{" "}
+                                  Lisa Chen
                                 </h4>
                                 <span className="testi-profile-desig">
-                                  Software Engineer
+                                  Insurance Agent
                                 </span>
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              Working with this company has been a game-changer
-                              for my business. Their expertise and innovative
-                              approach have helped us achieve remarkable
+                              "The detailed vehicle history reports from this service are invaluable for my insurance assessments. Fast turnaround time and accurate information every time."
                             </p>
                           </div>
                         </div>
@@ -298,10 +261,10 @@ const ClientAreaTwo = () => {
                   </Swiper>
                 </div>
                 <div className="icon-box">
-                  <button className="slick-arrow style3 default testimonial_R-button-next">
+                  <button className="slick-arrow style3 default testimonial_R-button-prev">
                     <i className="fas fa-arrow-left" />
                   </button>
-                  <button className="slick-arrow style3 default testimonial_R-button-prev">
+                  <button className="slick-arrow style3 default testimonial_R-button-next">
                     <i className="fas fa-arrow-right" />
                   </button>
                 </div>
@@ -311,8 +274,9 @@ const ClientAreaTwo = () => {
         </div>
         <div className="testimonial-thumb-2">
           <img
-            src="assets/img/normal/testimonial-thumb-2-1.png"
-            alt="Fixturbo"
+            src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            alt="Car Inspection"
+            style={{ borderRadius: '10px' }}
           />
         </div>
       </div>
