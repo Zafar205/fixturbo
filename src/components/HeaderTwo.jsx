@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const HeaderTwo = () => {
   const [active, setActive] = useState(false);
@@ -7,39 +8,48 @@ const HeaderTwo = () => {
 
   useEffect(() => {
     var offCanvasNav = document.getElementById("offcanvas-navigation");
-    var offCanvasNavSubMenu = offCanvasNav.querySelectorAll(".sub-menu");
+    
+    if (offCanvasNav) {
+      var offCanvasNavSubMenu = offCanvasNav.querySelectorAll(".sub-menu");
 
-    for (let i = 0; i < offCanvasNavSubMenu.length; i++) {
-      offCanvasNavSubMenu[i].insertAdjacentHTML(
-        "beforebegin",
-        "<span class='mean-expand-class'></span>"
-      );
-    }
+      for (let i = 0; i < offCanvasNavSubMenu.length; i++) {
+        offCanvasNavSubMenu[i].insertAdjacentHTML(
+          "beforebegin",
+          "<span class='mean-expand-class'></span>"
+        );
+      }
 
-    var menuExpand = offCanvasNav.querySelectorAll(".mean-expand-class");
-    var numMenuExpand = menuExpand.length;
+      var menuExpand = offCanvasNav.querySelectorAll(".mean-expand-class");
+      var numMenuExpand = menuExpand.length;
 
-    function sideMenuExpand() {
-      if (this.parentElement.classList.contains("active") === true) {
-        this.parentElement.classList.remove("active");
-      } else {
-        for (let i = 0; i < numMenuExpand; i++) {
-          menuExpand[i].parentElement.classList.remove("active");
+      function sideMenuExpand() {
+        if (this.parentElement.classList.contains("active") === true) {
+          this.parentElement.classList.remove("active");
+        } else {
+          for (let i = 0; i < numMenuExpand; i++) {
+            menuExpand[i].parentElement.classList.remove("active");
+          }
+          this.parentElement.classList.add("active");
         }
-        this.parentElement.classList.add("active");
+      }
+
+      for (let i = 0; i < numMenuExpand; i++) {
+        menuExpand[i].addEventListener("click", sideMenuExpand);
       }
     }
-
-    for (let i = 0; i < numMenuExpand; i++) {
-      menuExpand[i].addEventListener("click", sideMenuExpand);
-    }
-    window.onscroll = () => {
+    
+    const handleScroll = () => {
       if (window.pageYOffset < 150) {
         setScroll(false);
       } else if (window.pageYOffset > 150) {
         setScroll(true);
       }
-      return () => (window.onscroll = null);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -53,7 +63,7 @@ const HeaderTwo = () => {
           <div className="row justify-content-center justify-content-lg-between align-items-center gy-2">
             <div className="col-auto d-none d-lg-block">
               <div className="header-logo">
-                <Link to="/">
+                <Link href="/">
                   <img src="assets/img/logo.svg" alt="Fixturbo" />
                 </Link>
               </div>
@@ -92,7 +102,7 @@ const HeaderTwo = () => {
             <div className="row align-items-center justify-content-between">
               <div className="col-auto header-navbar-logo">
                 <div className="header-logo">
-                  <Link to="/">
+                  <Link href="/">
                     <img src="assets/img/logo-white.svg" alt="Fixturbo" />
                   </Link>
                 </div>
@@ -101,34 +111,19 @@ const HeaderTwo = () => {
                 <nav className="main-menu d-none d-lg-inline-block">
                   <ul>
                     <li className="menu-item-has-children">
-                        <NavLink
-                        to="/"
-                        className={(navData) =>
-                          navData.isActive ? "active" : ""
-                        }
-                      >
+                        <a href="#home">
                         Home
-                      </NavLink>
+                        </a>
                     </li>
                     <li>
-                      <NavLink
-                        to="/about"
-                        className={(navData) =>
-                          navData.isActive ? "active" : ""
-                        }
-                      >
+                      <a href="#about">
                         About Us
-                      </NavLink>
+                      </a>
                     </li>
                     <li>
-                      <NavLink
-                        to="/contact"
-                        className={(navData) =>
-                          navData.isActive ? "active" : ""
-                        }
-                      >
+                      <a href="#contact">
                         Contact
-                      </NavLink>
+                      </a>
                     </li>
                   </ul>
                 </nav>
@@ -144,18 +139,18 @@ const HeaderTwo = () => {
               </div>
               <div className="col-auto d-xl-block d-none">
                 <div className="social-links">
-                  <Link to="https://www.facebook.com/">
+                  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-facebook-f" />
-                  </Link>
-                  <Link to="https://www.instagram.com/">
+                  </a>
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-instagram" />
-                  </Link>
-                  <Link to="https://www.twitter.com/">
+                  </a>
+                  <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-twitter" />
-                  </Link>
-                  <Link to="https://www.linkedin.com/">
+                  </a>
+                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-linkedin" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -166,7 +161,7 @@ const HeaderTwo = () => {
         <div className={`mobile-menu-wrapper  ${active && "body-visible"}`}>
           <div className="mobile-menu-area">
             <div className="mobile-logo">
-              <Link to="/">
+              <Link href="/">
                 <img src="assets/img/logo.svg" alt="Fixturbo" />
               </Link>
               <button className="menu-toggle" onClick={mobileMenu}>
@@ -176,24 +171,14 @@ const HeaderTwo = () => {
             <div className="mobile-menu">
               <ul id="offcanvas-navigation">
                 <li className="menu-item-has-children submenu-item-has-children">
-                  <Link to="/">Home</Link>
+                  <a href="/">Home</a>
                 </li>
                 <li>
-                  <NavLink
-                    to="/about"
-                    className={(navData) => (navData.isActive ? "active" : "")}
-                  >
-                    About
-                  </NavLink>
+                  <a href="#about">About</a>
                 </li>
 
                 <li>
-                  <NavLink
-                    to="/contact"
-                    className={(navData) => (navData.isActive ? "active" : "")}
-                  >
-                    Contact
-                  </NavLink>
+                  <a href="#contact">Contact</a>
                 </li>
               </ul>
             </div>

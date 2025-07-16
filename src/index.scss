@@ -1,3 +1,9 @@
+// Bootstrap CSS
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+// Font Awesome CSS
+@import "../public/assets/css/fontawesome.min.css";
+
 // Plugin CSS
 @import "~animate.css";
 @import "swiper/scss";
@@ -9,5 +15,5 @@
 @import "rc-slider/assets/index.css";
 
 // Init main SCSS File
-@import "/public/assets/css/demo.scss";
-@import "/public/assets/sass/style.scss";
+@import "../public/assets/css/demo.scss";
+@import "../public/assets/sass/style.scss";

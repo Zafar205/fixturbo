@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import SEOHead from "../components/SEOHead";
 
 const ThankYouPage = () => {
   useEffect(() => {
@@ -8,7 +9,17 @@ const ThankYouPage = () => {
   }, []);
 
   return (
-    <div className="thank-you-page" style={{ backgroundColor: '#f8f9fa', minHeight: '100vh' }}>
+    <>
+      {/* SEO Head */}
+      <SEOHead 
+        title="Thank You - Car Check Store | Order Confirmation"
+        description="Thank you for your purchase! Your vehicle history report from Car Check Store is being prepared and will be delivered to your email within minutes."
+        keywords="car check store, order confirmation, vehicle history report, VIN check, thank you"
+        url="https://carcheck.store/11235813.html"
+        type="website"
+      />
+      
+      <div className="thank-you-page" style={{ backgroundColor: '#f8f9fa', minHeight: '100vh' }}>
       {/* Header Section */}
       <div className="thank-you-header" style={{ 
         backgroundColor: '#E8092E', 
@@ -188,7 +199,7 @@ const ThankYouPage = () => {
               {/* Action Buttons */}
               <div className="text-center" style={{ marginTop: '40px' }}>
                 <Link 
-                  to="/" 
+                  href="/" 
                   className="btn"
                   style={{ 
                     backgroundColor: '#E8092E', 
@@ -210,7 +221,7 @@ const ThankYouPage = () => {
                   Back to Home
                 </Link>
                 <Link 
-                  to="/" 
+                  href="/" 
                   className="btn"
                   style={{ 
                     backgroundColor: 'transparent', 
@@ -257,6 +268,7 @@ const ThankYouPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

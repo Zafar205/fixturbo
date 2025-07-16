@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, Thumbs, EffectFade } from "swiper";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const TeamAreaTwo = () => {
   return (
@@ -101,16 +101,16 @@ const TeamAreaTwo = () => {
                       </span>
                       <div className="team-social_wrap">
                         <div className="social-btn style2">
-                          <Link to="https://linkedin.com/">
+                          <Link href="https://linkedin.com/">
                             <i className="fab fa-linkedin-in" />
                           </Link>
-                          <Link to="https://www.instagram.com/">
+                          <Link href="https://www.instagram.com/">
                             <i className="fab fa-instagram" />
                           </Link>
-                          <Link to="https://facebook.com/">
+                          <Link href="https://facebook.com/">
                             <i className="fab fa-facebook-f" />
                           </Link>
-                          <Link to="https://twitter.com/">
+                          <Link href="https://twitter.com/">
                             <i className="fab fa-twitter" />
                           </Link>
                         </div>
@@ -151,16 +151,16 @@ const TeamAreaTwo = () => {
                       <span className="team-card_desig">Vehicle History Expert</span>
                       <div className="team-social_wrap">
                         <div className="social-btn style2">
-                          <Link to="https://linkedin.com/">
+                          <Link href="https://linkedin.com/">
                             <i className="fab fa-linkedin-in" />
                           </Link>
-                          <Link to="https://www.instagram.com/">
+                          <Link href="https://www.instagram.com/">
                             <i className="fab fa-instagram" />
                           </Link>
-                          <Link to="https://facebook.com/">
+                          <Link href="https://facebook.com/">
                             <i className="fab fa-facebook-f" />
                           </Link>
-                          <Link to="https://twitter.com/">
+                          <Link href="https://twitter.com/">
                             <i className="fab fa-twitter" />
                           </Link>
                         </div>
@@ -204,16 +204,16 @@ const TeamAreaTwo = () => {
                       </span>
                       <div className="team-social_wrap">
                         <div className="social-btn style2">
-                          <Link to="https://linkedin.com/">
+                          <Link href="https://linkedin.com/">
                             <i className="fab fa-linkedin-in" />
                           </Link>
-                          <Link to="https://www.instagram.com/">
+                          <Link href="https://www.instagram.com/">
                             <i className="fab fa-instagram" />
                           </Link>
-                          <Link to="https://facebook.com/">
+                          <Link href="https://facebook.com/">
                             <i className="fab fa-facebook-f" />
                           </Link>
-                          <Link to="https://twitter.com/">
+                          <Link href="https://twitter.com/">
                             <i className="fab fa-twitter" />
                           </Link>
                         </div>
@@ -255,16 +255,16 @@ const TeamAreaTwo = () => {
                       <span className="team-card_desig">Research Director</span>
                       <div className="team-social_wrap">
                         <div className="social-btn style2">
-                          <Link to="https://linkedin.com/">
+                          <Link href="https://linkedin.com/">
                             <i className="fab fa-linkedin-in" />
                           </Link>
-                          <Link to="https://www.instagram.com/">
+                          <Link href="https://www.instagram.com/">
                             <i className="fab fa-instagram" />
                           </Link>
-                          <Link to="https://facebook.com/">
+                          <Link href="https://facebook.com/">
                             <i className="fab fa-facebook-f" />
                           </Link>
-                          <Link to="https://twitter.com/">
+                          <Link href="https://twitter.com/">
                             <i className="fab fa-twitter" />
                           </Link>
                         </div>

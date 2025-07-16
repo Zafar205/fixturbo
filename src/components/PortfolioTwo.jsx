@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, Thumbs, EffectFade } from "swiper";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 const PortfolioTwo = () => {
   return (
     <div className="portfolio-area-1 space overflow-hidden">
@@ -75,13 +75,13 @@ const PortfolioTwo = () => {
                   <div className="portfolio-card-details">
                     <div className="media-left">
                       <h4 className="portfolio-card-details_title">
-                        <Link to="/">2019 Toyota Camry LE</Link>
+                        <Link href="/">2019 Toyota Camry LE</Link>
                       </h4>
                       <span className="portfolio-card-details_subtitle">
                         Clean Title • No Accidents
                       </span>
                     </div>
-                    <Link to="/" className="icon-btn">
+                    <Link href="/" className="icon-btn">
                       <i className="fas fa-arrow-right" />
                     </Link>
                   </div>
@@ -97,13 +97,13 @@ const PortfolioTwo = () => {
                   <div className="portfolio-card-details">
                     <div className="media-left">
                       <h4 className="portfolio-card-details_title">
-                        <Link to="/">2020 Honda Civic Sport</Link>
+                        <Link href="/">2020 Honda Civic Sport</Link>
                       </h4>
                       <span className="portfolio-card-details_subtitle">
                         1 Previous Owner • Service Records
                       </span>
                     </div>
-                    <Link to="/" className="icon-btn">
+                    <Link href="/" className="icon-btn">
                       <i className="fas fa-arrow-right" />
                     </Link>
                   </div>
@@ -119,13 +119,13 @@ const PortfolioTwo = () => {
                   <div className="portfolio-card-details">
                     <div className="media-left">
                       <h4 className="portfolio-card-details_title">
-                        <Link to="/">2018 BMW X5 xDrive35i</Link>
+                        <Link href="/">2018 BMW X5 xDrive35i</Link>
                       </h4>
                       <span className="portfolio-card-details_subtitle">
                         Luxury SUV • Well Maintained
                       </span>
                     </div>
-                    <Link to="/" className="icon-btn">
+                    <Link href="/" className="icon-btn">
                       <i className="fas fa-arrow-right" />
                     </Link>
                   </div>
@@ -141,13 +141,13 @@ const PortfolioTwo = () => {
                   <div className="portfolio-card-details">
                     <div className="media-left">
                       <h4 className="portfolio-card-details_title">
-                        <Link to="/">2021 Ford F-150 XLT</Link>
+                        <Link href="/">2021 Ford F-150 XLT</Link>
                       </h4>
                       <span className="portfolio-card-details_subtitle">
                         Pickup Truck • Fleet Vehicle
                       </span>
                     </div>
-                    <Link to="/" className="icon-btn">
+                    <Link href="/" className="icon-btn">
                       <i className="fas fa-arrow-right" />
                     </Link>
                   </div>
@@ -163,13 +163,13 @@ const PortfolioTwo = () => {
                   <div className="portfolio-card-details">
                     <div className="media-left">
                       <h4 className="portfolio-card-details_title">
-                        <Link to="/">2022 Tesla Model 3</Link>
+                        <Link href="/">2022 Tesla Model 3</Link>
                       </h4>
                       <span className="portfolio-card-details_subtitle">
                         Electric Vehicle • Autopilot
                       </span>
                     </div>
-                    <Link to="/" className="icon-btn">
+                    <Link href="/" className="icon-btn">
                       <i className="fas fa-arrow-right" />
                     </Link>
                   </div>

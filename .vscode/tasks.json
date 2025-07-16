@@ -4,9 +4,22 @@
 		{
 			"label": "start-dev-server",
 			"type": "shell",
-			"command": "npm start",
+			"command": "npm run dev",
 			"group": "build",
 			"isBackground": true,
+			"problemMatcher": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "build-production",
+			"type": "shell",
+			"command": "npm run build",
+			"group": "build",
 			"problemMatcher": []
 		}
 	]

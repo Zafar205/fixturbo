@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SEOHead from "../components/SEOHead";
 import HeaderTwo from "../components/HeaderTwo";
 import HeroTwo from "../components/HeroTwo";
 import ServiceAreaTwo from "../components/ServiceAreaTwo";
@@ -26,6 +27,14 @@ const HomePageTwo = () => {
   }, []);
   return (
     <>
+      {/* SEO Head */}
+      <SEOHead 
+        title="Car Check Store - #1 Vehicle History Reports & VIN Check Services | Instant Car Inspection Reports"
+        description="Car Check Store provides instant, comprehensive vehicle history reports and car inspection services. Get detailed VIN checks, accident records, ownership history, and market value analysis. Your trusted car check store for used car buying decisions."
+        keywords="car check store, VIN check, vehicle history report, car inspection report, VIN number lookup, vehicle inspection, car history check, auto report, VIN decoder, vehicle records, car buying report, accident history, title check, ownership records, vehicle verification, auto inspection"
+        url="https://carcheck.store"
+      />
+
       {/* Preloader */}
       {active === true && <Preloader />}
 

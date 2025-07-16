@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const HeroTwo = () => {
   return (
     <div
@@ -26,9 +24,9 @@ const HeroTwo = () => {
                 Professional car inspection services you can trust. Our certified technicians provide comprehensive vehicle assessments to ensure your safety and peace of mind on the road.
               </p>
               <div className="btn-group">
-                <Link to="/about" className="btn">
+                <a href="#about" className="btn">
                   Learn More
-                </Link>
+                </a>
                 <div className="call-media-wrap">
                   <div className="icon">
                     <img src="assets/img/icon/phone-1.svg" alt="Fixturbo" />
@@ -36,9 +34,9 @@ const HeroTwo = () => {
                   <div className="media-body">
                     <h6 className="title text-white">Requesting A Call:</h6>
                     <h4 className="link">
-                      <Link className="text-white" to="tel:6295550129">
+                      <a className="text-white" href="tel:6295550129">
                         (629) 555-0129
-                      </Link>
+                      </a>
                     </h4>
                   </div>
                 </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const PricingPlanTwo = () => {
   const [userCountry, setUserCountry] = useState('US');
@@ -10,6 +10,65 @@ const PricingPlanTwo = () => {
     vin: ''
   });
   const [loading, setLoading] = useState(false);
+
+  // Modal styles
+  const modalStyles = {
+    overlay: {
+      display: 'flex',
+      position: 'fixed',
+      zIndex: 1000,
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    modal: {
+      backgroundColor: 'white',
+      width: '90%',
+      maxWidth: '500px',
+      padding: '30px',
+      borderRadius: '10px',
+      boxShadow: '0 5px 30px rgba(0, 0, 0, 0.15)',
+      position: 'relative'
+    },
+    closeButton: {
+      position: 'absolute',
+      right: '20px',
+      top: '15px',
+      fontSize: '24px',
+      cursor: 'pointer'
+    },
+    input: {
+      width: '100%',
+      padding: '12px',
+      border: '1px solid #ddd',
+      borderRadius: '5px',
+      fontSize: '16px'
+    },
+    submitButton: {
+      width: '100%',
+      padding: '15px',
+      background: '#E8092E',
+      color: 'white',
+      border: 'none',
+      borderRadius: '5px',
+      fontSize: '16px',
+      fontWeight: '600',
+      cursor: 'pointer'
+    },
+    loadingSpinner: {
+      border: '4px solid rgba(0, 0, 0, 0.1)',
+      borderRadius: '50%',
+      borderTop: '4px solid #2757ad',
+      width: '30px',
+      height: '30px',
+      animation: 'spin 1s linear infinite',
+      margin: '10px auto'
+    }
+  };
 
   // Paddle Configuration
   const CONFIG = {
@@ -49,8 +108,10 @@ const PricingPlanTwo = () => {
 
   // Initialize Paddle
   useEffect(() => {
+    let isMounted = true;
+
     const initializePaddle = () => {
-      if (window.Paddle) {
+      if (window.Paddle && isMounted) {
         try {
           window.Paddle.Environment.set("production");
           window.Paddle.Setup({
@@ -75,17 +136,24 @@ const PricingPlanTwo = () => {
       const script = document.createElement('script');
       script.src = 'https://cdn.paddle.com/paddle/v2/paddle.js';
       script.onload = initializePaddle;
+      script.onerror = () => {
+        console.error("Failed to load Paddle script");
+      };
       document.head.appendChild(script);
     } else {
       initializePaddle();
     }
+
     // Detect user country
     detectUserCountry();
-    // eslint-disable-next-line
-  }, []);
+
+    return () => {
+      isMounted = false;
+    };
+  }, [CONFIG.clientToken, detectUserCountry]);
 
   // Detect user's country
-  const detectUserCountry = async () => {
+  const detectUserCountry = useCallback(async () => {
     try {
       const response = await fetch('https://ipapi.co/json/');
       const data = await response.json();
@@ -97,7 +165,7 @@ const PricingPlanTwo = () => {
       console.error("Error detecting country:", error);
       setUserCountry('US');
     }
-  };
+  }, []);
 
   // Format price based on country
   const formatPrice = (price, countryCode) => {
@@ -218,7 +286,9 @@ const PricingPlanTwo = () => {
 
     sendMail(submitData);
     openPaddleCheckout(selectedPlan, formData.name, formData.email, formData.vin);
-  };  return (
+  };
+
+  return (
     <>
       <div className="pricing-area-2 space">
         <div className="container">
@@ -404,40 +474,15 @@ const PricingPlanTwo = () => {
       {/* Checkout Modal */}
       {showModal && (
         <div 
-          style={{
-            display: 'flex',
-            position: 'fixed',
-            zIndex: 1000,
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(0, 0, 0, 0.6)',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
+          style={modalStyles.overlay}
           onClick={closeModal}
         >
           <div 
-            style={{
-              backgroundColor: 'white',
-              width: '90%',
-              maxWidth: '500px',
-              padding: '30px',
-              borderRadius: '10px',
-              boxShadow: '0 5px 30px rgba(0, 0, 0, 0.15)',
-              position: 'relative'
-            }}
+            style={modalStyles.modal}
             onClick={(e) => e.stopPropagation()}
           >
             <span 
-              style={{
-                position: 'absolute',
-                right: '20px',
-                top: '15px',
-                fontSize: '24px',
-                cursor: 'pointer'
-              }}
+              style={modalStyles.closeButton}
               onClick={closeModal}
             >
               &times;
@@ -458,13 +503,7 @@ const PricingPlanTwo = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  style={{
-                    width: '100%',
-                    padding: '12px',
-                    border: '1px solid #ddd',
-                    borderRadius: '5px',
-                    fontSize: '16px'
-                  }}
+                  style={modalStyles.input}
                 />
               </div>
 
@@ -478,13 +517,7 @@ const PricingPlanTwo = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  style={{
-                    width: '100%',
-                    padding: '12px',
-                    border: '1px solid #ddd',
-                    borderRadius: '5px',
-                    fontSize: '16px'
-                  }}
+                  style={modalStyles.input}
                 />
               </div>
 
@@ -498,13 +531,7 @@ const PricingPlanTwo = () => {
                   value={formData.vin}
                   onChange={handleInputChange}
                   required
-                  style={{
-                    width: '100%',
-                    padding: '12px',
-                    border: '1px solid #ddd',
-                    borderRadius: '5px',
-                    fontSize: '16px'
-                  }}
+                  style={modalStyles.input}
                   placeholder="Enter 17-character VIN"
                 />
               </div>
@@ -513,16 +540,8 @@ const PricingPlanTwo = () => {
                 type="submit"
                 disabled={loading}
                 style={{
-                  display: loading ? 'none' : 'block',
-                  width: '100%',
-                  padding: '15px',
-                  background: '#E8092E',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '5px',
-                  fontSize: '16px',
-                  fontWeight: '600',
-                  cursor: 'pointer'
+                  ...modalStyles.submitButton,
+                  display: loading ? 'none' : 'block'
                 }}
               >
                 Proceed to Payment
@@ -530,15 +549,7 @@ const PricingPlanTwo = () => {
 
               {loading && (
                 <div style={{ textAlign: 'center', marginTop: '15px' }}>
-                  <div style={{
-                    border: '4px solid rgba(0, 0, 0, 0.1)',
-                    borderRadius: '50%',
-                    borderTop: '4px solid #2757ad',
-                    width: '30px',
-                    height: '30px',
-                    animation: 'spin 1s linear infinite',
-                    margin: '10px auto'
-                  }}></div>
+                  <div style={modalStyles.loadingSpinner}></div>
                   <p>Loading...</p>
                 </div>
               )}

@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const FooterAreaTwo = () => {
   return (    <footer
@@ -8,7 +8,7 @@ const FooterAreaTwo = () => {
     >
       <div className="container">
         <div className="footer-top-2">          <div className="footer-logo">
-            <Link to="/">
+            <Link href="/">
               <img src="/assets/img/logo-white.svg" alt="Car Check Store" />
             </Link>
           </div>
@@ -39,18 +39,18 @@ const FooterAreaTwo = () => {
                   for accurate vehicle inspection data.
                 </p>
                 <div className="social-btn style3">
-                  <Link to="https://www.instagram.com/" tabIndex={-1}>
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" tabIndex={-1}>
                     <i className="fab fa-instagram" />
-                  </Link>
-                  <Link to="https://linkedin.com/" tabIndex={-1}>
+                  </a>
+                  <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" tabIndex={-1}>
                     <i className="fab fa-linkedin-in" />
-                  </Link>
-                  <Link to="https://twitter.com/" tabIndex={-1}>
+                  </a>
+                  <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" tabIndex={-1}>
                     <i className="fab fa-twitter" />
-                  </Link>
-                  <Link to="https://facebook.com/" tabIndex={-1}>
+                  </a>
+                  <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" tabIndex={-1}>
                     <i className="fab fa-facebook-f" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>            <div className="col-md-6 col-xl-auto">
@@ -59,19 +59,19 @@ const FooterAreaTwo = () => {
                 <div className="menu-all-pages-container">
                   <ul className="menu">
                     <li>
-                      <Link to="/">About Us</Link>
+                      <a href="#about">About Us</a>
                     </li>
                     <li>
-                      <Link to="/">Our Team</Link>
+                      <a href="#team">Our Team</a>
                     </li>
                     <li>
-                      <Link to="/">FAQ</Link>
+                      <a href="#faq">FAQ</a>
                     </li>
                     <li>
-                      <Link to="/">Privacy Policy</Link>
+                      <a href="#privacy">Privacy Policy</a>
                     </li>
                     <li>
-                      <Link to="/">Sample Report</Link>
+                      <a href="#sample">Sample Report</a>
                     </li>
                   </ul>
                 </div>
@@ -83,7 +83,7 @@ const FooterAreaTwo = () => {
                   <ul className="menu">
                     <li>
                       <Link 
-                        to="#"
+                        href="#"
                         onClick={(e) => {
                           e.preventDefault();
                           const pricingSection = document.getElementById('pricing-section');
@@ -97,7 +97,7 @@ const FooterAreaTwo = () => {
                     </li>
                     <li>
                       <Link 
-                        to="#"
+                        href="#"
                         onClick={(e) => {
                           e.preventDefault();
                           const pricingSection = document.getElementById('pricing-section');
@@ -111,7 +111,7 @@ const FooterAreaTwo = () => {
                     </li>
                     <li>
                       <Link 
-                        to="#"
+                        href="#"
                         onClick={(e) => {
                           e.preventDefault();
                           const pricingSection = document.getElementById('pricing-section');
@@ -125,7 +125,7 @@ const FooterAreaTwo = () => {
                     </li>
                     <li>
                       <Link 
-                        to="#"
+                        href="#"
                         onClick={(e) => {
                           e.preventDefault();
                           const pricingSection = document.getElementById('pricing-section');
@@ -139,7 +139,7 @@ const FooterAreaTwo = () => {
                     </li>
                     <li>
                       <Link 
-                        to="#"
+                        href="#"
                         onClick={(e) => {
                           e.preventDefault();
                           const pricingSection = document.getElementById('pricing-section');
@@ -178,7 +178,7 @@ const FooterAreaTwo = () => {
                     <div className="contact-grid-details">
                       <p>VIN Support Line</p>
                       <h6>
-                        <Link to="tel:8881234567">1-888-VIN-REPORTS</Link>
+                        <Link href="tel:8881234567">1-888-VIN-REPORTS</Link>
                         <p />
                         (1-888-846-7376)
                       </h6>
@@ -191,7 +191,7 @@ const FooterAreaTwo = () => {
                     <div className="contact-grid-details">
                       <p>Email Support</p>
                       <h6>
-                        <Link to="mailto:support@vininspectorpro.com">
+                        <Link href="mailto:car.check.store@gmail.com">
                           car.check.store@gmail.com
                         </Link>
                         <p />
@@ -300,15 +300,15 @@ const FooterAreaTwo = () => {
         <div className="container">
           <div className="row gy-3 justify-content-md-between justify-content-center">            <div className="col-auto align-self-center">
               <p className="copyright-text text-center">
-                © <Link to="#">Car Check</Link> 2014 | All Rights Reserved
+                © <Link href="#">Car Check</Link> 2014 | All Rights Reserved
               </p>
             </div>
             <div className="col-auto">
               <div className="footer-links">
-                <Link to="/">Terms &amp; Conditions</Link>
-                <Link to="/">Privacy Policy</Link>
-                <Link to="/">Data Security</Link>
-                <Link to="/">Contact Us</Link>
+                <Link href="/">Terms &amp; Conditions</Link>
+                <Link href="/">Privacy Policy</Link>
+                <Link href="/">Data Security</Link>
+                <Link href="/">Contact Us</Link>
               </div>
             </div>
           </div>
