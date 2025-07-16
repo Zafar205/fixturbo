@@ -1,4 +1,6 @@
 
+import React from "react";
+
 const ServiceAreaTwo = () => {
   const scrollToPricing = () => {
     const pricingSection = document.querySelector('.pricing-area-2');

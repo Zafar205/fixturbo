@@ -1,4 +1,6 @@
 
+import React from "react";
+
 const CTAAreaTwo = () => {
   return (
     <div className="cta-area-2">

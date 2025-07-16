@@ -1,4 +1,6 @@
 
+import React from "react";
+
 const BlogAreaTwo = () => {
   return (
     <section className="blog-area space-bottom">
