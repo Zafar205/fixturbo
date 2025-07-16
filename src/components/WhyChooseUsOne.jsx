@@ -1,5 +1,6 @@
 
 import React from "react";
+import Image from "next/image";
 
 const WhyChooseUsOne = () => {
   return (
@@ -10,10 +11,12 @@ const WhyChooseUsOne = () => {
               <span className="sub-title">Why Choose Our VIN Reports</span>
               <h2 className="sec-title">
                 Comprehensive Vehicle History Reports{" "}
-                <img
+                <Image
                   className="title-bg-shape shape-center"
-                  src="assets/img/bg/title-bg-shape.png"
+                  src="/assets/img/bg/title-bg-shape.png"
                   alt="VIN Reports"
+                  width={150}
+                  height={30}
                 />
               </h2>
             </div>
@@ -23,9 +26,11 @@ const WhyChooseUsOne = () => {
       <div className="container">
         <div className="row gy-40 gx-60 align-items-center">          <div className="col-xl-4 order-xl-2">
             <div className="wcu-thumb-1">
-              <img 
+              <Image 
                 src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
                 alt="Professional Car Inspection and VIN Check"
+                width={600}
+                height={400}
                 style={{
                   width: '100%', 
                   height: '400px', 
@@ -39,7 +44,12 @@ const WhyChooseUsOne = () => {
           <div className="col-xl-4 col-md-6 order-xl-1">
             <div className="wcu-card-wrap right-wrap">              <div className="wcu-card">
                 <div className="icon">
-                  <img src="https://cdn-icons-png.flaticon.com/128/2991/2991148.png" alt="Accident History" style={{width: '60px', height: '60px'}} />
+                  <Image 
+                    src="https://cdn-icons-png.flaticon.com/128/2991/2991148.png" 
+                    alt="Accident History" 
+                    width={60} 
+                    height={60} 
+                  />
                 </div>
                 <div className="wcu-card-details">
                   <h4 className="wcu-card-title">Accident History</h4>
@@ -51,7 +61,12 @@ const WhyChooseUsOne = () => {
               </div>
               <div className="wcu-card">
                 <div className="icon">
-                  <img src="https://cdn-icons-png.flaticon.com/128/1041/1041916.png" alt="Ownership Records" style={{width: '60px', height: '60px'}} />
+                  <Image 
+                    src="https://cdn-icons-png.flaticon.com/128/1041/1041916.png" 
+                    alt="Ownership Records" 
+                    width={60} 
+                    height={60} 
+                  />
                 </div>
                 <div className="wcu-card-details">
                   <h4 className="wcu-card-title">Ownership Records</h4>
@@ -63,7 +78,12 @@ const WhyChooseUsOne = () => {
               </div>
               <div className="wcu-card">
                 <div className="icon">
-                  <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="Service History" style={{width: '60px', height: '60px'}} />
+                  <Image 
+                    src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" 
+                    alt="Service History" 
+                    width={60} 
+                    height={60} 
+                  />
                 </div>
                 <div className="wcu-card-details">
                   <h4 className="wcu-card-title">Service History</h4>
@@ -77,7 +97,12 @@ const WhyChooseUsOne = () => {
           </div>
           <div className="col-xl-4 col-md-6 order-xl-3">            <div className="wcu-card">
               <div className="icon">
-                <img src="https://cdn-icons-png.flaticon.com/128/1005/1005141.png" alt="Title Check" style={{width: '60px', height: '60px'}} />
+                <Image 
+                  src="https://cdn-icons-png.flaticon.com/128/1005/1005141.png" 
+                  alt="Title Check" 
+                  width={60} 
+                  height={60} 
+                />
               </div>
               <div className="wcu-card-details">
                 <h4 className="wcu-card-title">Title Verification</h4>
@@ -89,7 +114,12 @@ const WhyChooseUsOne = () => {
             </div>
             <div className="wcu-card">
               <div className="icon">
-                <img src="https://cdn-icons-png.flaticon.com/128/3659/3659899.png" alt="Market Value" style={{width: '60px', height: '60px'}} />
+                <Image 
+                  src="https://cdn-icons-png.flaticon.com/128/3659/3659899.png" 
+                  alt="Market Value" 
+                  width={60} 
+                  height={60} 
+                />
               </div>
               <div className="wcu-card-details">
                 <h4 className="wcu-card-title">Market Value</h4>
@@ -101,7 +131,12 @@ const WhyChooseUsOne = () => {
             </div>
             <div className="wcu-card">
               <div className="icon">
-                <img src="https://cdn-icons-png.flaticon.com/128/2965/2965879.png" alt="Instant Report" style={{width: '60px', height: '60px'}} />
+                <Image 
+                  src="https://cdn-icons-png.flaticon.com/128/2965/2965879.png" 
+                  alt="Instant Report" 
+                  width={60} 
+                  height={60} 
+                />
               </div>
               <div className="wcu-card-details">
                 <h4 className="wcu-card-title">Instant Reports</h4>

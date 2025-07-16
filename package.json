@@ -21,7 +21,8 @@
     "react-on-screen": "^2.1.1",
     "react-range": "^1.8.14",
     "react-scroll-to-top": "^3.0.0",
-    "swiper": "^9.1.1"
+    "swiper": "^9.1.1",
+    "web-vitals": "^5.0.3"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

@@ -1,0 +1,13 @@
+{
+  "name": "image-optimization",
+  "description": "Script to help optimize images",
+  "main": "optimize-images.js",
+  "scripts": {
+    "optimize-images": "node optimize-images.js",
+    "analyze-bundle": "npm run build && npx @next/bundle-analyzer"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.0",
+    "sharp": "^0.32.6"
+  }
+}

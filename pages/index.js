@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from "react";
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+
+// Static imports for above-the-fold components
 import HeaderTwo from "../src/components/HeaderTwo";
 import HeroTwo from "../src/components/HeroTwo";
-import ServiceAreaTwo from "../src/components/ServiceAreaTwo";
-import AboutTwo from "../src/components/AboutTwo";
-import CounterTwo from "../src/components/CounterTwo";
-import PortfolioTwo from "../src/components/PortfolioTwo";
-import WhyChooseUsOne from "../src/components/WhyChooseUsOne";
-import ProcessAreaTwo from "../src/components/ProcessAreaTwo";
-import CTAAreaTwo from "../src/components/CTAAreaTwo";
-import PricingPlanTwo from "../src/components/PricingPlanTwo";
-import AppointmentAreaTwo from "../src/components/AppointmentAreaTwo";
-import TeamAreaTwo from "../src/components/TeamAreaTwo";
-import ClientAreaTwo from "../src/components/ClientAreaTwo";
-import FaqAreaTwo from "../src/components/FaqAreaTwo";
-import BlogAreaTwo from "../src/components/BlogAreaTwo";
-import FooterAreaTwo from "../src/components/FooterAreaTwo";
 import Preloader from "../src/helper/Preloader";
+
+// Dynamic imports for below-the-fold components
+const ServiceAreaTwo = dynamic(() => import("../src/components/ServiceAreaTwo"), { ssr: true });
+const AboutTwo = dynamic(() => import("../src/components/AboutTwo"), { ssr: true });
+const CounterTwo = dynamic(() => import("../src/components/CounterTwo"), { ssr: true });
+const PortfolioTwo = dynamic(() => import("../src/components/PortfolioTwo"), { ssr: true });
+const WhyChooseUsOne = dynamic(() => import("../src/components/WhyChooseUsOne"), { ssr: true });
+const ProcessAreaTwo = dynamic(() => import("../src/components/ProcessAreaTwo"), { ssr: true });
+const CTAAreaTwo = dynamic(() => import("../src/components/CTAAreaTwo"), { ssr: true });
+const PricingPlanTwo = dynamic(() => import("../src/components/PricingPlanTwo"), { ssr: true });
+const AppointmentAreaTwo = dynamic(() => import("../src/components/AppointmentAreaTwo"), { ssr: true });
+const TeamAreaTwo = dynamic(() => import("../src/components/TeamAreaTwo"), { ssr: true });
+const ClientAreaTwo = dynamic(() => import("../src/components/ClientAreaTwo"), { ssr: true });
+const FaqAreaTwo = dynamic(() => import("../src/components/FaqAreaTwo"), { ssr: true });
+const BlogAreaTwo = dynamic(() => import("../src/components/BlogAreaTwo"), { ssr: true });
+const FooterAreaTwo = dynamic(() => import("../src/components/FooterAreaTwo"), { ssr: true });
 
 // Dynamically import ScrollToTop to avoid SSR issues
 const ScrollToTop = dynamic(() => import('react-scroll-to-top'), {
@@ -30,7 +34,7 @@ const HomePage = () => {
   useEffect(() => {
     setTimeout(function () {
       setActive(false);
-    }, 2000);
+    }, 800); // Reduced from 2000ms to 800ms for faster loading
   }, []);
 
   const structuredData = {

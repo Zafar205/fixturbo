@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const HeroTwo = () => {
   return (
@@ -18,7 +19,13 @@ const HeroTwo = () => {
               <h1 className="hero-title text-white">
                 Crafting{" "}
                 <span>
-                  <img src="assets/img/hero/hero_shape_2.png" alt="Fixturbo" />
+                  <Image 
+                    src="/assets/img/hero/hero_shape_2.png" 
+                    alt="Fixturbo" 
+                    width={100}
+                    height={40}
+                    priority
+                  />
                   Automotive
                 </span>{" "}
                 Excellence One Repair At Time
@@ -32,7 +39,12 @@ const HeroTwo = () => {
                 </a>
                 <div className="call-media-wrap">
                   <div className="icon">
-                    <img src="assets/img/icon/phone-1.svg" alt="Fixturbo" />
+                    <Image 
+                      src="/assets/img/icon/phone-1.svg" 
+                      alt="Fixturbo" 
+                      width={24}
+                      height={24}
+                    />
                   </div>
                   <div className="media-body">
                     <h6 className="title text-white">Requesting A Call:</h6>

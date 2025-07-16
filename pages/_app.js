@@ -7,6 +7,27 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     // Import Bootstrap JS only on client side
     require('bootstrap/dist/js/bootstrap.bundle.min');
+    
+    // Performance monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Log Core Web Vitals
+      const reportWebVitals = (metric) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`${metric.name}: ${metric.value}`);
+        }
+      };
+      
+      // Monitor LCP, FID, CLS
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getLCP, getFID, getCLS, getFCP, getTTFB }) => {
+          getLCP(reportWebVitals);
+          getFID(reportWebVitals);
+          getCLS(reportWebVitals);
+          getFCP(reportWebVitals);
+          getTTFB(reportWebVitals);
+        });
+      }
+    }
   }, []);
 
   return (
