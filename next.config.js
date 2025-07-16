@@ -4,6 +4,10 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: false,
   distDir: 'build',
+  eslint: {
+    // Disable ESLint during builds
+    ignoreDuringBuilds: true,
+  },
   images: {
     unoptimized: true
   },

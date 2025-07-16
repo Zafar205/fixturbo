@@ -106,6 +106,21 @@ const PricingPlanTwo = () => {
     MY: { symbol: 'RM', position: 'before', code: 'MYR' }
   };
 
+  // Detect user's country
+  const detectUserCountry = useCallback(async () => {
+    try {
+      const response = await fetch('https://ipapi.co/json/');
+      const data = await response.json();
+      if (data && data.country_code) {
+        setUserCountry(data.country_code);
+        console.log(`Detected country: ${data.country_code}`);
+      }
+    } catch (error) {
+      console.error("Error detecting country:", error);
+      setUserCountry('US');
+    }
+  }, []);
+
   // Initialize Paddle
   useEffect(() => {
     let isMounted = true;
@@ -151,21 +166,6 @@ const PricingPlanTwo = () => {
       isMounted = false;
     };
   }, [CONFIG.clientToken, detectUserCountry]);
-
-  // Detect user's country
-  const detectUserCountry = useCallback(async () => {
-    try {
-      const response = await fetch('https://ipapi.co/json/');
-      const data = await response.json();
-      if (data && data.country_code) {
-        setUserCountry(data.country_code);
-        console.log(`Detected country: ${data.country_code}`);
-      }
-    } catch (error) {
-      console.error("Error detecting country:", error);
-      setUserCountry('US');
-    }
-  }, []);
 
   // Format price based on country
   const formatPrice = (price, countryCode) => {
