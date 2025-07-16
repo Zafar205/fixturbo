@@ -127,7 +127,7 @@ const ThankYouPage = () => {
                           <div>
                             <h5 style={{ marginBottom: '5px', color: '#333' }}>Processing Your Order</h5>
                             <p style={{ marginBottom: '0', color: '#666', fontSize: '14px' }}>
-                              We're generating your comprehensive vehicle history report
+                              We&apos;re generating your comprehensive vehicle history report
                             </p>
                           </div>
                         </div>

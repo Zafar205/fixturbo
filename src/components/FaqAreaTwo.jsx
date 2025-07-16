@@ -89,7 +89,7 @@ const FaqAreaTwo = () => {
                   <div className="accordion-body">
                     <p className="faq-text">
                       Most VIN inspection reports are generated instantly upon payment. In some cases where additional 
-                      verification is needed, reports may take up to 24 hours. You'll receive your detailed report 
+                      verification is needed, reports may take up to 24 hours. You&apos;ll receive your detailed report 
                       via email with all the vehicle information you need.
                     </p>
                   </div>

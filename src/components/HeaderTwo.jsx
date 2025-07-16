@@ -171,7 +171,7 @@ const HeaderTwo = () => {
             <div className="mobile-menu">
               <ul id="offcanvas-navigation">
                 <li className="menu-item-has-children submenu-item-has-children">
-                  <a href="/">Home</a>
+                  <Link href="/">Home</Link>
                 </li>
                 <li>
                   <a href="#about">About</a>

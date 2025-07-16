@@ -77,8 +77,8 @@ const ThankYouPage = () => {
                         Your Report is Being Prepared
                       </h3>
                       <p style={{ fontSize: '1.1rem', color: '#666', lineHeight: '1.6' }}>
-                        We're generating your comprehensive vehicle history report right now. 
-                        You'll receive your detailed VIN inspection report within the next few minutes.
+                        We&apos;re generating your comprehensive vehicle history report right now. 
+                        You&apos;ll receive your detailed VIN inspection report within the next few minutes.
                       </p>
                       <div className="order-details" style={{ marginTop: '30px' }}>
                         <h5 style={{ color: '#333', marginBottom: '15px' }}>What happens next?</h5>
@@ -168,7 +168,7 @@ const ThankYouPage = () => {
                       Your report download link and order confirmation have been sent to your email address.
                     </p>
                     <p style={{ color: '#999', fontSize: '0.9rem', margin: '0' }}>
-                      Don't forget to check your spam folder if you don't see it in your inbox.
+                      Don&apos;t forget to check your spam folder if you don&apos;t see it in your inbox.
                     </p>
                   </div>
                 </div>

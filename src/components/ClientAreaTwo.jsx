@@ -192,7 +192,7 @@ const ClientAreaTwo = () => {
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              "The VIN inspection report was incredibly detailed and helped me make an informed decision about purchasing my used car. The service was fast and professional!"
+                              &quot;The VIN inspection report was incredibly detailed and helped me make an informed decision about purchasing my used car. The service was fast and professional!&quot;
                             </p>
                           </div>
                         </div>
@@ -212,7 +212,7 @@ const ClientAreaTwo = () => {
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              "As a first-time car buyer, this VIN check service gave me peace of mind. The report revealed important history that wasn't disclosed by the seller. Highly recommend!"
+                              &quot;As a first-time car buyer, this VIN check service gave me peace of mind. The report revealed important history that wasn&apos;t disclosed by the seller. Highly recommend!&quot;
                             </p>
                           </div>
                         </div>
@@ -232,7 +232,7 @@ const ClientAreaTwo = () => {
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              "I use this service for all my customers who are buying used vehicles. The comprehensive reports help identify potential issues before purchase. Excellent accuracy!"
+                              &quot;I use this service for all my customers who are buying used vehicles. The comprehensive reports help identify potential issues before purchase. Excellent accuracy!&quot;
                             </p>
                           </div>
                         </div>
@@ -252,7 +252,7 @@ const ClientAreaTwo = () => {
                               </div>
                             </div>
                             <p className="testi-card_text">
-                              "The detailed vehicle history reports from this service are invaluable for my insurance assessments. Fast turnaround time and accurate information every time."
+                              &quot;The detailed vehicle history reports from this service are invaluable for my insurance assessments. Fast turnaround time and accurate information every time.&quot;
                             </p>
                           </div>
                         </div>
