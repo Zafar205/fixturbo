@@ -22,7 +22,8 @@ const HeroTwo = () => {
                   Automotive
                 </span>{" "}
                 Excellence One Repair At Time
-              </h1>              <p className="hero-text text-white">
+              </h1>
+              <p className="hero-text text-white">
                 Professional car inspection services you can trust. Our certified technicians provide comprehensive vehicle assessments to ensure your safety and peace of mind on the road.
               </p>
               <div className="btn-group">
