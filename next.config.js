@@ -3,7 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: false,
-  distDir: 'build',
   eslint: {
     // Disable ESLint during builds
     ignoreDuringBuilds: true,
