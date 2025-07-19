@@ -100,11 +100,11 @@ const HomePage = () => {
         {/* Open Graph Tags */}
         <meta property="og:title" content="Car Check Store - #1 Vehicle History Reports & VIN Check Services" />
         <meta property="og:description" content="Car Check Store provides instant, comprehensive vehicle history reports and car inspection services. Get detailed VIN checks, accident records, ownership history, and market value analysis." />
-        <meta property="og:image" content="https://fixturbo-nextjs.vercel.app/card.png" />
+        <meta property="og:image" content="https://carcheck.store/card.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Car Check Store - Vehicle History Reports and VIN Check Services" />
-        <meta property="og:url" content="https://fixturbo-nextjs.vercel.app" />
+        <meta property="og:url" content="https://carcheck.store" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Car Check Store" />
         <meta property="og:locale" content="en_US" />
@@ -113,14 +113,14 @@ const HomePage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Car Check Store - #1 Vehicle History Reports & VIN Check Services" />
         <meta name="twitter:description" content="Car Check Store provides instant, comprehensive vehicle history reports and car inspection services. Get detailed VIN checks, accident records, ownership history, and market value analysis." />
-        <meta name="twitter:image" content="https://fixturbo-nextjs.vercel.app/card.png" />
+        <meta name="twitter:image" content="https://carcheck.store/card.png" />
         <meta name="twitter:image:alt" content="Car Check Store - Vehicle History Reports and VIN Check Services" />
         <meta name="twitter:site" content="@carcheckstore" />
         
         {/* Additional SEO Tags */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="author" content="Car Check Store" />
-        <link rel="canonical" href="https://fixturbo-nextjs.vercel.app/" />
+        <link rel="canonical" href="https://carcheck.store/" />
         
         {/* Structured Data */}
         <script
